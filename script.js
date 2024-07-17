@@ -16,12 +16,21 @@ function setClock() {
 
 function toggleMenu() {
   const menu = document.getElementById('menu');
+  const clock = document.getElementById('clock');
+
+  // Toggle display of the menu
   if (menu.style.display === 'none' || menu.style.display === '') {
     menu.style.display = 'block';
+
+    // Calculate the position to place the menu below the clock
+    const clockRect = clock.getBoundingClientRect();
+    menu.style.top = `${clockRect.bottom}px`;  // Position below the clock
+    menu.style.left = `${clockRect.left}px`;   // Align with the left edge of the clock
   } else {
     menu.style.display = 'none';
   }
 }
+
 
 function showStopwatch() {
   document.getElementById('clock').style.display = 'none';

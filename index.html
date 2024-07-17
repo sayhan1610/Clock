@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="card">
+    <div class="card" id="clock">
       <div class="numbers">
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
-        <span class="number"></span>
+        <span class="number" style="--i: 1"></span>
+        <span class="number" style="--i: 2"></span>
+        <span class="number" style="--i: 3"></span>
+        <span class="number" style="--i: 4"></span>
+        <span class="number" style="--i: 5"></span>
+        <span class="number" style="--i: 6"></span>
+        <span class="number" style="--i: 7"></span>
+        <span class="number" style="--i: 8"></span>
+        <span class="number" style="--i: 9"></span>
+        <span class="number" style="--i: 10"></span>
+        <span class="number" style="--i: 11"></span>
+        <span class="number" style="--i: 12"></span>
       </div>
       <div class="needles">
         <span class="h" id="hour-hand"></span>
@@ -29,6 +29,19 @@
         <span class="center"></span>
       </div>
       <div class="pie"></div>
+    </div>
+    <div class="menu" id="menu">
+      <button id="timer">Timer</button>
+      <button id="stopwatch">Stopwatch</button>
+    </div>
+    <div class="card" id="stopwatch-card" style="display: none">
+      <div class="stopwatch-display" id="stopwatch-display">00:00:00</div>
+    </div>
+    <div class="menu" id="stopwatch-menu" style="display: none">
+      <button id="start-stopwatch">Start</button>
+      <button id="stop-stopwatch">Stop</button>
+      <button id="reset-stopwatch">Reset</button>
+      <button id="back-to-clock">Back to Clock</button>
     </div>
     <script src="script.js"></script>
   </body>

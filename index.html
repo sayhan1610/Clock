@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <audio id="tick-audio" src="/sounds/tick.mp3" loop autoplay muted></audio>
+    <audio id="timer-audio" src="/sounds/timer.mp3" loop></audio>
+    <button id="mute-button" class="mute-button">🔇</button>
     <div class="card" id="clock">
       <div class="numbers">
         <span class="number" style="--i: 1"></span>
@@ -35,13 +38,42 @@
       <button id="stopwatch">Stopwatch</button>
     </div>
     <div class="card" id="stopwatch-card" style="display: none">
-      <div class="stopwatch-display" id="stopwatch-display">00:00:00</div>
+      <div class="stopwatch-display" id="stopwatch-display">00:00:00.00</div>
     </div>
     <div class="menu" id="stopwatch-menu" style="display: none">
       <button id="start-stopwatch">Start</button>
       <button id="stop-stopwatch">Stop</button>
       <button id="reset-stopwatch">Reset</button>
       <button id="back-to-clock">Back to Clock</button>
+    </div>
+    <div class="card" id="timer-card" style="display: none">
+      <div class="timer-inputs">
+        <input type="number" id="hours-input" placeholder="HH" min="0" />
+        <span>:</span>
+        <input
+          type="number"
+          id="minutes-input"
+          placeholder="MM"
+          min="0"
+          max="59"
+        />
+        <span>:</span>
+        <input
+          type="number"
+          id="seconds-input"
+          placeholder="SS"
+          min="0"
+          max="59"
+        />
+      </div>
+      <div class="timer-display" id="timer-display">00:00:00</div>
+    </div>
+    <div class="menu" id="timer-menu" style="display: none">
+      <button id="start-timer">Start</button>
+      <button id="stop-timer">Stop</button>
+      <button id="reset-timer">Reset</button>
+      <button id="dismiss-timer" style="display: none">Dismiss</button>
+      <button id="back-to-clock-timer">Back to Clock</button>
     </div>
     <script src="script.js"></script>
   </body>
